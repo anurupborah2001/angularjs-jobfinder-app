@@ -1,0 +1,33 @@
+<section>
+  <div class="page-header">
+    <h1 ng-bind="vm.job.title"></h1>
+  </div>
+  <div class="pull-right" ng-show="vm.job.isCurrentUserOwner">
+    <a class="btn btn-primary" ui-sref="jobs.edit({ jobId: vm.job._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="vm.job.created | date:'mediumDate'"></span>
+      by
+      <span ng-if="vm.job.user" ng-bind="vm.job.user.displayName"></span>
+      <span ng-if="!vm.job.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.job.description"></p>
+  <ul>
+      <li><strong>Listing date : </strong><span ng-bind="vm.job.created | date:'mediumDate'"></span></li>
+      <li><strong>Job Poster : </strong><span ng-if="vm.job.user" ng-bind="vm.job.user.displayName"></span><span ng-if="!vm.job.user">Deleted User</span></li>
+      <li><strong>Company Name : </strong><span ng-bind="vm.job.company_name"></span></li>
+      <li><strong>Hourly Wages : </strong><span ng-bind="vm.job.hourly_wage"></span></li>
+      <li><strong>Requirement : </strong><span ng-bind="vm.job.requirement"></span></li>
+      <li><strong>Contact Email : </strong><a href="mailto:{{  vm.job.contact_email}}"><span ng-bind="vm.job.contact_email"></span></a></li>
+  </ul>
+  <br/><br/>
+  <a href="/jobs">Go Back</a>
+</section>

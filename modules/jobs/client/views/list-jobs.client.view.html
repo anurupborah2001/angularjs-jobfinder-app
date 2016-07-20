@@ -1,0 +1,26 @@
+<section>
+  <div class="page-header">
+    <h1>Jobs</h1>
+  </div>
+    <table class="table table-striped">
+        <tr>
+            <td>Job Title</td>
+            <td>Company</td>
+            <td>Hourly Wage</td>
+            <td>Date Listed</td>
+            <td>Posted By</td>
+        </tr>
+        <tr ng-repeat="job in vm.jobs">
+            <td> <a  ui-sref="jobs.view({ jobId: job._id })">{{ job.title }}</a></td>
+            <td>{{ job.company_name }} - {{ job.state }}</td>
+            <td>{{ job.hourly_wage }}</td>
+            <td>{{ job.created }}</td>
+            <td><span ng-if="job.user" ng-bind="job.user.displayName"></span>
+        <span ng-if="!job.user">Deleted User</span></td>
+        </tr>
+    </table>
+
+  <div class="alert alert-warning text-center" ng-if="vm.jobs.$resolved && !vm.jobs.length">
+    No jobs yet, why don't you <a ui-sref="jobs.create">create one</a>?
+  </div>
+</section>
