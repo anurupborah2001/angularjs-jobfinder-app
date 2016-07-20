@@ -16,7 +16,7 @@ mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mon
  # Stop MongoDB Service
  -------------------
  net stop mongodb
- 
+  
 #  Command to connect to MongoDB
  -------------------------------
  mongo
