@@ -9,30 +9,30 @@ Steps to Run MongoDB(as per Windows) :
 - Install MongoDB as  a Service
 mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongodb.log --logappend --rest --install
 
-Start Mongo DB Service: 
+# Start Mongo DB Service: 
  ----------------
  net start mongodb
  
- Stop MongoDB Service
+ # Stop MongoDB Service
  -------------------
  net stop mongodb
  
- Command to connect to MongoDB
+#  Command to connect to MongoDB
  -------------------------------
  mongo
  
- Before running the project need to install the dependencies using bower
+#  Before running the project need to install the dependencies using bower
  
  Install the bower as :
  npm install -g bower
  
- Install Grant :
+#  Install Grant :
  npm install -g grunt-cli
  
- Installing the Node modules
+#  Installing the Node modules
  --------------------------
  npm install
  
- Running the Applciation
+#  Running the Applciation
  --------------------------
  grunt
