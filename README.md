@@ -1,4 +1,4 @@
-# Angular JS JOB Finder Applciation
+# Node JS JOB Finder Applciation
     This is a demo application using MEAN.JS(MongoDB , Express, Angular JS and Nodee.js) Framework 
     
     Needed to install MongoDB
